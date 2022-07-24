@@ -10,6 +10,8 @@ export class StoreInventory {
   updateQuality(): readonly Item[] {
     for (let i = 0; i < this.items.length; i++) {
       this.items[i].update();
+    }
+    for (let i = 0; i < this.items.length; i++) {
       this.removeExpiredItem(i);
     }
     return this.items;
